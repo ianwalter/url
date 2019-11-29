@@ -1,6 +1,11 @@
 {
   "name": "@ianwalter/url",
+  "description": "The URL constructor / class without tears",
   "license": "SEE LICENSE IN LICENSE",
+  "author": {
+    "name": "Ian Walter",
+    "url": "https://ianwalter.dev"
+  },
   "main": "dist/url.js",
   "module": "dist/url.m.js",
   "scripts": {

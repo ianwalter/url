@@ -1,7 +1,5 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`complex url 1`] = `"{\\"hash\\":\\"#results?query=MacBook&page=1\\",\\"host\\":\\"ianwalter.dev\\",\\"hostname\\":\\"ianwalter.dev\\",\\"href\\":\\"https://ianwalter.dev/search#results?query=MacBook&page=1\\",\\"origin\\":\\"https://ianwalter.dev\\",\\"password\\":\\"\\",\\"pathname\\":\\"/search\\",\\"port\\":\\"\\",\\"protocol\\":\\"https:\\",\\"username\\":\\"\\",\\"search\\":{}}"`;
-
 exports[`simple url 1`] = `"{\\"hash\\":\\"\\",\\"host\\":\\"ianwalter.dev\\",\\"hostname\\":\\"ianwalter.dev\\",\\"href\\":\\"https://ianwalter.dev/\\",\\"origin\\":\\"https://ianwalter.dev\\",\\"password\\":\\"\\",\\"pathname\\":\\"/\\",\\"port\\":\\"\\",\\"protocol\\":\\"https:\\",\\"username\\":\\"\\",\\"search\\":{}}"`;
 
 exports[`url with query 1`] = `"{\\"hash\\":\\"\\",\\"host\\":\\"ianwalter.dev\\",\\"hostname\\":\\"ianwalter.dev\\",\\"href\\":\\"https://ianwalter.dev/search?query=MacBook&page=1\\",\\"origin\\":\\"https://ianwalter.dev\\",\\"password\\":\\"\\",\\"pathname\\":\\"/search\\",\\"port\\":\\"\\",\\"protocol\\":\\"https:\\",\\"username\\":\\"\\",\\"search\\":{\\"query\\":\\"MacBook\\",\\"page\\":\\"1\\"}}"`;
