@@ -23,3 +23,8 @@ test('url with base', ({ expect }) => {
   expect(url.toString()).toBe(`https://ianwalter.dev${path}`)
   expect(url.pathname).toBe(path)
 })
+
+test('URL instance', ({ expect }) => {
+  const url = new Url(new URL('https://ianwalter.dev'))
+  expect(url).toMatchSnapshot()
+})
