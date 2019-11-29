@@ -1,7 +1,7 @@
 export default class Url {
-  constructor (url) {
+  constructor (...args) {
     Object.defineProperty(this, 'url', { enumerable: false, writable: true })
-    this.url = url instanceof URL ? url : new URL(url)
+    this.url = args[0] instanceof URL ? url : new URL(...args)
     this.toString = this.url.toString.bind(this.url)
 
     this.hash = this.url.hash

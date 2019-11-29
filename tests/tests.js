@@ -16,3 +16,10 @@ test('url with query', ({ expect }) => {
   expect(url.toString()).toBe(urlString)
   expect(JSON.stringify(url)).toMatchSnapshot()
 })
+
+test('url with base', ({ expect }) => {
+  const path = '/spotlight-on-decision-tree'
+  const url = new Url(path, 'https://ianwalter.dev')
+  expect(url.toString()).toBe(`https://ianwalter.dev${path}`)
+  expect(url.pathname).toBe(path)
+})
