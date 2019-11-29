@@ -28,5 +28,10 @@
   },
   "eslintIgnore": [
     "dist"
-  ]
+  ],
+  "renovate": {
+    "extends": [
+      "@ianwalter"
+    ]
+  }
 }
