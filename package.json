@@ -1,6 +1,6 @@
 {
   "name": "@ianwalter/url",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "The URL constructor / class without tears",
   "license": "SEE LICENSE IN LICENSE",
   "author": {
