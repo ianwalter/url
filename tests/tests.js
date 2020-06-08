@@ -1,4 +1,5 @@
 const { test } = require('@ianwalter/bff')
+const merge = require('@ianwalter/merge')
 const Url = require('..')
 
 test('simple url', ({ expect }) => {
@@ -27,4 +28,13 @@ test('url with base', ({ expect }) => {
 test('URL instance', ({ expect }) => {
   const url = new Url(new URL('https://ianwalter.dev'))
   expect(url).toMatchSnapshot()
+})
+
+test('merge', ({ expect }) => {
+  const urlString = 'https://ianwalter.dev'
+  const url = new Url(urlString)
+  const newHost = 'mybinxhealth.com'
+  const merged = merge({ name: newHost }, url)
+  expect(merged.name).toBe(newHost)
+  expect(merged.origin).toBe(urlString)
 })
