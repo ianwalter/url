@@ -1,0 +1,55 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`simple url 1`] = `
+Object {
+  "hash": "",
+  "host": "ianwalter.dev",
+  "hostname": "ianwalter.dev",
+  "href": "https://ianwalter.dev/",
+  "origin": "https://ianwalter.dev",
+  "password": "",
+  "pathname": "/",
+  "port": "",
+  "protocol": "https:",
+  "search": Object {},
+  "username": "",
+}
+`;
+
+exports[`url from object 1`] = `
+Object {
+  "hash": "#aboutAuthor",
+  "host": "ianwalter.dev",
+  "hostname": "ianwalter.dev",
+  "href": "https://ianwalter.dev/spotlight-on-decision-tree#aboutAuthor",
+  "origin": "https://ianwalter.dev",
+  "password": "",
+  "pathname": "/spotlight-on-decision-tree",
+  "port": "",
+  "protocol": "https:",
+  "search": Object {},
+  "username": "",
+}
+`;
+
+exports[`url with query 1`] = `
+Object {
+  "hash": "",
+  "host": "ianwalter.dev",
+  "hostname": "ianwalter.dev",
+  "href": "https://ianwalter.dev/q?product=ipad&product=ipod&page=1",
+  "origin": "https://ianwalter.dev",
+  "password": "",
+  "pathname": "/q",
+  "port": "",
+  "protocol": "https:",
+  "search": Object {
+    "page": "1",
+    "product": Array [
+      "ipad",
+      "ipod",
+    ],
+  },
+  "username": "",
+}
+`;

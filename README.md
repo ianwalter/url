@@ -13,12 +13,9 @@ yarn add @ianwalter/url
 ## Usage
 
 ```js
-const Url = require('@ianwalter/url')
+const createUrl = require('@ianwalter/url')
 
-const url = new Url('https://ianwalter.dev')
-// or use a URL instance:
-// let url = new URL('https://ianwalter.dev')
-// url = new Url(url)
+const url = createUrl('https://ianwalter.dev')
 
 url.hostname //=> ianwalter.dev
 ```
