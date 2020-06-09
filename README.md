@@ -16,8 +16,9 @@ yarn add @ianwalter/url
 const createUrl = require('@ianwalter/url')
 
 const url = createUrl('https://ianwalter.dev')
-
 url.hostname //=> ianwalter.dev
+url.pathname = '/projects'
+url.href //=> https://ianwalter.dev/projects
 ```
 
 ## License
