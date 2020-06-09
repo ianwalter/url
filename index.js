@@ -20,7 +20,7 @@ export default function createUrl (base, path) {
     }
   }
 
-  // TODO: comment
+  // Re-arrange the arguments for the URL class since it's API is backwards IMO.
   const args = []
   if (base && typeof base === 'object') {
     if (path) {
@@ -38,15 +38,15 @@ export default function createUrl (base, path) {
   const desc = { enumerable: false, writable: true, value: new URL(...args) }
   Object.defineProperty(url, 'src', desc)
 
-  //
+  // Go through all the props and set up getters and setters for them on the url
+  // Object.
   for (const prop of props) {
-    // Create a descriptor with a setter that also sets the property on the src
-    // URL instance so that it can
     let descriptor
     if (prop === 'search') {
       descriptor = {
         enumerable: true,
         set (val) {
+          // Convert the search Object into a query string.
           const entries = Object.entries(val).reduce(
             (acc, [k, v]) => {
               if (Array.isArray(v)) return acc.concat(v.map(vs => [k, vs]))
@@ -63,6 +63,7 @@ export default function createUrl (base, path) {
           this.src.search = search
         },
         get () {
+          // Convert the searchParams instance into a normal key-value Object.
           const obj = {}
           for (const [k, v] of this.src.searchParams) {
             if (obj[k] !== undefined && Array.isArray(obj[k])) {
@@ -77,7 +78,6 @@ export default function createUrl (base, path) {
         }
       }
     } else {
-      // TODO: comment
       descriptor = {
         enumerable: true,
         get () {
