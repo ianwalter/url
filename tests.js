@@ -30,12 +30,3 @@ test('url from object', t => {
   const url = createUrl(base, '/spotlight-on-decision-tree#aboutAuthor')
   t.expect(JSON.parse(JSON.stringify(url))).toMatchSnapshot()
 })
-
-test.skip('merge', t => {
-  const urlString = 'https://ianwalter.dev'
-  const url = createUrl(urlString)
-  const newHost = 'mybinxhealth.com'
-  const merged = merge({ name: newHost }, url)
-  t.expect(merged.name).toBe(newHost)
-  t.expect(merged.href).toBe(urlString)
-})

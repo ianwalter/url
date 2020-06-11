@@ -44,6 +44,7 @@ export default function createUrl (base, path) {
     let descriptor
     if (prop === 'search') {
       descriptor = {
+        configurable: true,
         enumerable: true,
         set (val) {
           // Convert the search Object into a query string.
@@ -79,6 +80,7 @@ export default function createUrl (base, path) {
       }
     } else {
       descriptor = {
+        configurable: true,
         enumerable: true,
         get () {
           return this.src[prop]
