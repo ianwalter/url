@@ -24,8 +24,14 @@ test('url with base', t => {
   t.expect(url.pathname).toBe(path)
 })
 
-test('url from object', t => {
+test('url from url instance', t => {
   const base = createUrl('https://ianwalter.dev')
   const url = createUrl(base, '/spotlight-on-decision-tree#aboutAuthor')
   t.expect(JSON.parse(JSON.stringify(url))).toMatchSnapshot()
+})
+
+test('updating a url property', t => {
+  const url = createUrl('https://ianwalter.dev')
+  url.hostname = 'app.mybinxhealth.com'
+  t.expect(url.href).toContain(url.hostname)``
 })

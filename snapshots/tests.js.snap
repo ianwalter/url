@@ -16,7 +16,7 @@ Object {
 }
 `;
 
-exports[`url from object 1`] = `
+exports[`url from url instance 1`] = `
 Object {
   "hash": "#aboutAuthor",
   "host": "ianwalter.dev",
