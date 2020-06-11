@@ -1,5 +1,4 @@
 const { test } = require('@ianwalter/bff')
-const merge = require('@ianwalter/merge')
 const createUrl = require('.')
 
 test('simple url', t => {
