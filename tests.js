@@ -32,6 +32,6 @@ test('url from url instance', t => {
 
 test('updating a url property', t => {
   const url = createUrl('https://ianwalter.dev')
-  url.hostname = 'app.mybinxhealth.com'
-  t.expect(url.href).toContain(url.hostname)``
+  url.host = 'app.mybinxhealth.com'
+  t.expect(url.href.includes(url.host)).toBe(true)
 })
